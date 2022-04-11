@@ -40,3 +40,21 @@ function playRound(playerSelection) {
         }
         
     }
+
+
+    btn.addEventListener('click', function (e) {
+        console.log(e);
+      });
+      
+      btn.addEventListener('click', function (e) {
+        e.target.style.background = 'blue';
+      });
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+
+// METHOD 2
+btn.onclick = alertFunction;
+
+// METHOD 3
+btn.addEventListener('click', alertFunction);
