@@ -1,66 +1,59 @@
 
-function playRound(playerSelection) {
 
+function alertFunction() {
+    console.log(playerSelection);
     const spr = ["Scissors", "Paper", "Rock"];
 
     const random = Math.floor(Math.random() * spr.length);
     computer = (random, spr[random]);
     
     if (playerSelection == "Scissors" && computer == "Paper") {
-            return "Scissors beats paper user wins!";
+        alert("Scissors beats paper user wins!");
         }
     if (playerSelection == "Scissors" && computer == "Rock") {
-        return "Rock beats Scissors Computer wins!";
+        alert("Rock beats Scissors Computer wins!");
         }
     if (playerSelection == "Scissors" && computer == "Scissors") {
-            return "We've got a draw on our hands";
+        alert("We've got a draw on our hands");
         }        
 
     if (playerSelection == "Paper" && computer == "Rock") {
-            return "Paper beats Rock User wins!";
+        alert("Paper beats Rock User wins!");
         }
     if (playerSelection == "Paper" && computer == "Scissors") {
             return "Scissors beats paper Computer wins!";
         }        
     if (playerSelection == "Paper" && computer == "Paper") {
-            return "We've got a draw on our hands";
+        alert("We've got a draw on our hands");
         }   
         
     if (playerSelection == "Rock" && computer == "Scissors") {
-            return "Rock beats Scissors User wins!";
+        alert("Rock beats Scissors User wins!");
         }
     if (playerSelection == "Rock" && computer == "Paper") {
-            return "paper beats paper rock computer wins!";
+        alert("paper beats paper rock computer wins!");
         }        
     if (playerSelection == "Rock" && computer == "Rock") {
-            return "We've got a draw on our hands";
+        alert("We've got a draw on our hands");
         }     
-        else{
-            return "Something aint right try again"
-        }
-        
     }
-
-function alertFunction() {
-        alert("YAY! YOU DID IT!");
-      }
       
       
 scissors.addEventListener('click', function (e) {
-        e.target.style.background = 'blue';
         console.log(e);
-        alertFunction()
+        playerSelection = "Scissors";
+        alertFunction();
       });
 
 
 paper.addEventListener('click', function (e) {
-        e.target.style.background = 'blue';
         console.log(e);
-        alertFunction()
+        playerSelection = "Paper";
+        alertFunction();
       });
 
 rock.addEventListener('click', function (e) {
-        e.target.style.background = 'blue';
         console.log(e);
-        alertFunction()
+        playerSelection = "Rock";
+        alertFunction();
       });
