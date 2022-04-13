@@ -1,12 +1,13 @@
 
 
 function alertFunction() {
-    console.log(playerSelection);
+
     const spr = ["Scissors", "Paper", "Rock"];
 
     const random = Math.floor(Math.random() * spr.length);
     computer = (random, spr[random]);
     
+
     if (playerSelection == "Scissors" && computer == "Paper") {
         alert("Scissors beats paper user wins!");
         }
@@ -38,11 +39,26 @@ function alertFunction() {
         }     
     }
       
+
+    function choices() {
+        if (playerSelection == "Rock") {
+            console.log(playerSelection)
+        const container = document.querySelector('#computer_scissors');
+            const content = document.createElement('div');
+            content.classList.add('content');
+            content.textContent = 'PLayer Chose Rock';
+
+            container.appendChild(content);
+        }     
+
+
+    }
       
 scissors.addEventListener('click', function (e) {
         console.log(e);
         playerSelection = "Scissors";
         alertFunction();
+        choices();
       });
 
 
@@ -50,10 +66,12 @@ paper.addEventListener('click', function (e) {
         console.log(e);
         playerSelection = "Paper";
         alertFunction();
+        choices()
       });
 
 rock.addEventListener('click', function (e) {
         console.log(e);
         playerSelection = "Rock";
         alertFunction();
+        choices()
       });
