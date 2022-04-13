@@ -40,17 +40,48 @@ function alertFunction() {
     }
       
 
-    function choices() {
+function choices() {
+
         if (playerSelection == "Rock") {
-            console.log(playerSelection)
+            
+        const container = document.querySelector('#rock');
+            container.classList.add('selected');
+
+        }   
+        if (playerSelection == "Scissors") {
+            
+        const container = document.querySelector('#scissors');
+             container.classList.add('selected');
+    
+            }   
+
+        if (playerSelection == "Paper") {
+            
+        const container = document.querySelector('#paper');
+              container.classList.add('selected');
+        
+                }   
+        
+
+        if (computer == "Rock") {
+            
+        const container = document.querySelector('#computer_rock');
+            container.classList.add('selected');
+    
+            }       
+        if (computer == "Scissors") {
+            
         const container = document.querySelector('#computer_scissors');
-            const content = document.createElement('div');
-            content.classList.add('content');
-            content.textContent = 'PLayer Chose Rock';
-
-            container.appendChild(content);
-        }     
-
+            container.classList.add('selected');
+            
+           }       
+        if (computer == "Paper") {
+            
+        const container = document.querySelector('#computer_paper');
+             container.classList.add('selected');
+                    
+                            }       
+                                
 
     }
       
