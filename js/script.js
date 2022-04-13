@@ -1,3 +1,5 @@
+var userscore = 0;
+var computerscore = 0;
 
 
 function alertFunction() {
@@ -10,9 +12,18 @@ function alertFunction() {
 
     if (playerSelection == "Scissors" && computer == "Paper") {
         alert("Scissors beats paper user wins!");
+        userscore++;
+        console.log(userscore);
+
+        const userscoreboard = document.querySelector('#userscore');
+        console.log(userscoreboard);
+        userscoreboard.textContent = userscore;
         }
     if (playerSelection == "Scissors" && computer == "Rock") {
         alert("Rock beats Scissors Computer wins!");
+        computerscore++;
+        console.log(computerscore);
+
         }
     if (playerSelection == "Scissors" && computer == "Scissors") {
         alert("We've got a draw on our hands");
@@ -20,9 +31,13 @@ function alertFunction() {
 
     if (playerSelection == "Paper" && computer == "Rock") {
         alert("Paper beats Rock User wins!");
+        userscore++;
+        console.log(userscore);
         }
     if (playerSelection == "Paper" && computer == "Scissors") {
-            return "Scissors beats paper Computer wins!";
+            console.log("Scissors beats paper Computer wins!");
+            computerscore++;
+            console.log(computerscore);
         }        
     if (playerSelection == "Paper" && computer == "Paper") {
         alert("We've got a draw on our hands");
@@ -30,9 +45,13 @@ function alertFunction() {
         
     if (playerSelection == "Rock" && computer == "Scissors") {
         alert("Rock beats Scissors User wins!");
+        userscore++;
+        console.log(userscore);
         }
     if (playerSelection == "Rock" && computer == "Paper") {
         alert("paper beats paper rock computer wins!");
+        computerscore++;
+        console.log(computerscore);
         }        
     if (playerSelection == "Rock" && computer == "Rock") {
         alert("We've got a draw on our hands");
@@ -45,7 +64,10 @@ function choices() {
         if (playerSelection == "Rock") {
             
         const container = document.querySelector('#rock');
-            container.classList.add('selected');
+             container.classList.add('selected');
+
+
+            
 
         }   
         if (playerSelection == "Scissors") {
