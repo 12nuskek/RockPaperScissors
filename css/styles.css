@@ -1,5 +1,10 @@
-/* styles.css */
+/* styles.css
+
+    border: 1px solid red;
+    
+    */
 * {
+
 }
 
 body {
@@ -18,6 +23,7 @@ img {
 }
 .container{
       display: flex;
+      justify-content: space-around;
   }
 .nav{
     justify-content: space-between;
@@ -55,5 +61,15 @@ img {
   
 .selected{
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-}  
-      
+} 
+.games{
+    justify-content: space-around;
+    background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 25px;
+    margin: 20px 40px 20px 40px;
+    padding: 20px;
+    
+}
+.history{
+    padding: 20px;
+}
